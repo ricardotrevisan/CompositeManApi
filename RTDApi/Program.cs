@@ -17,7 +17,8 @@ public static class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         builder.Services.AddHostedService<RtdLifecycleService>();
-
+        
+        builder.WebHost.UseUrls("http://0.0.0.0:5000");
         var app = builder.Build();
 
         app.UseSwagger();
